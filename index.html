@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="HITAF26 — Healthcare and Industry: Thinking About the Future. Doctoral Workshop, 28–31 October 2026.">
+
+  <title>HITAF26 | Healthcare and Industry — Thinking About the Future</title>
+
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --blue: #1464a5;
+      --cyan: #20a9c9;
+      --light: #f4f8fc;
+      --white: #ffffff;
+      --text: #1d2939;
+      --muted: #667085;
+      --border: #dfe7ef;
+      --gold: #d8a83e;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    /* ================= NAVIGATION ================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 31, 58, 0.97);
+      box-shadow: 0 3px 14px rgba(0,0,0,.12);
+    }
+
+    .nav-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #fff;
+      font-size: 1.25rem;
+    }
+
+    .brand span {
+      color: #55d7ee;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: #fff;
+      font-size: .92rem;
+      opacity: .92;
+    }
+
+    .nav-links a:hover {
+      color: #55d7ee;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          #07172d 0%,
+          #0d3b68 55%,
+          #138ba7 100%
+        );
+
+      color: #fff;
+      padding: 105px 0 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      right: -130px;
+      top: -120px;
+      box-shadow:
+        0 0 0 70px rgba(255,255,255,.025),
+        0 0 0 140px rgba(255,255,255,.018);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 30px;
+      font-size: .82rem;
+      letter-spacing: .8px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.02;
+      margin: 0 0 20px;
+      letter-spacing: -2px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.2rem, 2.5vw, 2rem);
+      font-weight: 400;
+      margin: 0 0 26px;
+      max-width: 850px;
+    }
+
+    .date {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #d9f7ff;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,.3);
+    }
+
+    .btn.primary {
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .btn.secondary {
+      color: #fff;
+      background: rgba(255,255,255,.08);
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      padding: 78px 0;
+    }
+
+    section.alt {
+      background: var(--light);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      color: var(--navy);
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* ================= ABOUT ================= */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(15,45,75,.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .info-box {
+      background: linear-gradient(145deg,#0b1f3a,#1464a5);
+      color: #fff;
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+    .info-box h3 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .info-row {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.16);
+    }
+
+    .info-row:last-child {
+      border-bottom: 0;
+    }
+
+    /* ================= COMMITTEE ================= */
+
+    .committee {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .person {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    /* ================= SPEAKERS ================= */
+
+    .speaker-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .speaker {
+      padding: 22px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      background: linear-gradient(135deg,var(--blue),var(--cyan));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    .speaker strong {
+      display: block;
+      color: var(--navy);
+    }
+
+    .speaker span {
+      font-size: .88rem;
+      color: var(--muted);
+    }
+
+    /* ================= PROGRAM ================= */
+
+    .day {
+      margin-bottom: 50px;
+    }
+
+    .day-heading {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 18px;
+    }
+
+    .day-badge {
+      background: var(--navy);
+      color: #fff;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .day-heading h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1.45rem;
+    }
+
+    .schedule-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 800px;
+    }
+
+    th {
+      background: #eef5fb;
+      color: var(--navy);
+      text-align: left;
+      padding: 15px;
+    }
+
+    td {
+      padding: 17px 15px;
+      border-top: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    td.time {
+      font-weight: 800;
+      color: var(--blue);
+      white-space: nowrap;
+      width: 145px;
+    }
+
+    td.speaker-col {
+      font-weight: 700;
+      width: 210px;
+    }
+
+    td.title-col strong {
+      color: var(--navy);
+    }
+
+    .description {
+      display: block;
+      color: var(--muted);
+      font-size: .91rem;
+      margin-top: 7px;
+    }
+
+    /* ================= TRAINING ================= */
+
+    .training {
+      background: linear-gradient(145deg,#f4f8fc,#e8f5f8);
+      border: 1px solid #d7e9f0;
+      border-radius: 18px;
+      padding: 35px;
+    }
+
+    .training-list {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .training-list div {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 13px 15px;
+      border-radius: 9px;
+      font-weight: 700;
+    }
+
+    /* ================= CLOSING ================= */
+
+    .closing {
+      text-align: center;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 20px;
+      padding: 50px 25px;
+    }
+
+    .closing h2 {
+      margin-top: 0;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #061426;
+      color: #cbd5e1;
+      padding: 35px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-title {
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .small {
+      font-size: .9rem;
+      color: #94a3b8;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .speaker-grid,
+      .committee {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .training-list {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+
+      .hero {
+        padding: 80px 0 65px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .speaker-grid,
+      .committee,
+      .training-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+  <div class="container nav-inner">
+
+    <a class="brand" href="#home">
+      HITAF<span>26</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#committee">Committee</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#program">Programme</a>
+      <a href="#training">Doctoral Training</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<header class="hero" id="home">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      DOCTORAL WORKSHOP · 2026
+    </div>
+
+    <h1>HITAF26</h1>
+
+    <h2>
+      Healthcare and Industry — Thinking About the Future
+    </h2>
+
+    <div class="date">
+      28–31 October 2026
+    </div>
+
+    <div class="hero-buttons">
+
+      <a class="btn primary" href="#program">
+        View Programme
+      </a>
+
+      <a class="btn secondary" href="#training">
+        Doctoral Training
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>About the Workshop</h2>
+
+      <p>
+        An interdisciplinary scientific programme for doctoral students and students
+      </p>
+
+    </div>
+
+
+    <div class="intro-grid">
+
+      <div class="card">
+
+        <h3>
+          Healthcare and Industry — Thinking About the Future
+        </h3>
+
+        <p>
+          HITAF26 is an interdisciplinary doctoral workshop bringing together
+          researchers, invited speakers and students around emerging questions
+          in artificial intelligence, organic chemistry, ethics, dynamical
+          systems, future industry and healthcare.
+        </p>
+
+        <p>
+          The workshop provides a forum for scientific exchange, discussion,
+          collaboration and innovation across disciplines.
+        </p>
+
+        <p>
+          <strong>📍 Venue:</strong> Room 2B6
+        </p>
+
+      </div>
+
+
+      <div class="info-box">
+
+        <h3>Key Information</h3>
+
+        <div class="info-row">
+          <strong>Dates</strong><br>
+          28–31 October 2026
+        </div>
+
+        <div class="info-row">
+          <strong>Format</strong><br>
+          Doctoral workshop & scientific training
+        </div>
+
+        <div class="info-row">
+          <strong>Location</strong><br>
+          Room 2B6
+        </div>
+
+        <div class="info-row">
+          <strong>Focus</strong><br>
+          AI · Healthcare · Industry · Chemistry · Ethics · Dynamical Systems
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= COMMITTEE ================= -->
+
+<section class="alt" id="committee">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Organizing Committee</h2>
+
+      <p>HITAF26 Workshop</p>
+
+    </div>
+
+
+    <div class="committee">
+
+      <div class="person">
+        Dr. Khaoula Ben Ali
+      </div>
+
+      <div class="person">
+        Dr. Adnen Arbi
+      </div>
+
+      <div class="person">
+        Dr. Rafik Katri
+      </div>
+
+      <div class="person">
+        Dr. Slim Kaddeche
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SPEAKERS ================= -->
+
+<section id="speakers">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Invited Speakers</h2>
+
+      <p>
+        Researchers and academic contributors
+      </p>
+
+    </div>
+
+
+    <div class="speaker-grid">
+
+      <div class="speaker">
+
+        <div class="avatar">
+          IB
+        </div>
+
+        <strong>
+          Dr. Imed Boughzala
+        </strong>
+
+        <span>
+          Director, ENSIIE
+        </span>
+
+      </div>
+
+
+      <div class="speaker">
+
+        <div class="avatar">
+          SS
+        </div>
+
+        <strong>
+          Dr. Slim Saadani
+        </strong>
+
+        <span>
+          RTCA
+        </span>
+
+      </div>
+
+
+      <div class="speaker">
+
+        <div class="avatar">
+          SB
+        </div>
+
+        <strong>
+          Dr. Sahbi Baccar
+        </strong>
+
+        <span>
+          ESIGELEC Rouen
+        </span>
+
+      </div>
+
+
+      <div class="speaker">
+
+        <div class="avatar">
+          TB
+        </div>
+
+        <strong>
+          Dr. Taoufik Ben Halima
+        </strong>
+
+        <span>
+          Canada
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <p style="text-align:center;color:#667085;margin-top:25px;">
+
+      Professors from INSAT and members of the scientific
+      committee will also contribute to the workshop.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROGRAM ================= -->
+
+<section class="alt" id="program">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Programme</h2>
+
+      <p>
+        Preliminary programme · 28–31 October 2026
+      </p>
+
+    </div>
+
+
+    <!-- DAY 1 -->
+
+    <div class="day">
+
+      <div class="day-heading">
+
+        <div class="day-badge">
+          DAY 1
+        </div>
+
+        <h3>
+          Opening, AI, Quantum Computing & Wireless Technologies
+        </h3>
+
+      </div>
+
+
+      <div class="schedule-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+              <th>Time</th>
+              <th>Speaker(s)</th>
+              <th>Intervention</th>
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            <tr>
+
+              <td class="time">
+                09:00–09:20
+              </td>
+
+              <td class="speaker-col">
+                University Presidency
+              </td>
+
+              <td class="title-col">
+                <strong>
+                  Official Opening
+                </strong>
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                09:20–09:40
+              </td>
+
+              <td class="speaker-col">
+                INSAT Directorate
+              </td>
+
+              <td class="title-col">
+                <strong>
+                  Director's Address
+                </strong>
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                10:00–12:00
+              </td>
+
+              <td class="speaker-col">
+                Dr. Imed Boughzala &amp;
+                Dr. Khaoula Ben Ali
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  AI in the Quantum Era /
+                  From Neural Networks to Quantum Neural Networks
+                </strong>
+
+                <span class="description">
+
+                  Artificial Intelligence and Quantum Computing are two major
+                  technological frontiers. Their convergence opens new
+                  possibilities in computation, optimization and machine
+                  learning, with implications for research, education and
+                  technological innovation.
+
+                </span>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                14:00–15:00
+              </td>
+
+              <td class="speaker-col">
+                Dr. Taoufik Ben Halima
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  From Master’s to Postdoc:
+                  A Research Journey in Applied Organic Chemistry
+                </strong>
+
+                <span class="description">
+
+                  45 min + 15 min Q&amp;A.
+                  Research in applied organic chemistry,
+                  with emphasis on cross-coupling of esters
+                  and related methodologies.
+
+                </span>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                15:00–15:45
+              </td>
+
+              <td class="speaker-col">
+                Pr. Sahbi Baccar
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  From RFID to Ambient IoT ISAC and 6G:
+                  The Journey Towards Converging Wireless Technologies
+                </strong>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                16:00–17:00
+              </td>
+
+              <td class="speaker-col">
+                Dr. Khaoula Ben Ali
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Ethics of Artificial Intelligence
+                </strong>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+
+    <!-- DAY 2 -->
+
+    <div class="day">
+
+      <div class="day-heading">
+
+        <div class="day-badge">
+          DAY 2
+        </div>
+
+        <h3>
+          AI, Philosophy, Dynamical Systems & Healthcare
+        </h3>
+
+      </div>
+
+
+      <div class="schedule-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+              <th>Time</th>
+              <th>Speaker(s)</th>
+              <th>Intervention</th>
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            <tr>
+
+              <td class="time">
+                09:00–11:00
+              </td>
+
+              <td class="speaker-col">
+                Dr. Slim Saadani
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Philosophical Perspectives on AI &amp;
+                  Disruptive Innovation
+                </strong>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                11:00–12:00
+              </td>
+
+              <td class="speaker-col">
+                Pr. Adnen Arbi
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Stability Analysis of Dynamical Systems
+                </strong>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                12:00–13:00
+              </td>
+
+              <td class="speaker-col">
+                Dr. Khaoula Ben Ali
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Toward a Unified Framework:
+                  Neural Networks, Quantum &amp; Manifolds
+                </strong>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                14:00–15:00
+              </td>
+
+              <td class="speaker-col">
+                Pr. Sahbi Baccar
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  AI Applications in Healthcare
+                </strong>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                15:00–17:00
+              </td>
+
+              <td class="speaker-col">
+                Dr. Taoufik Ben Halima
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Seminar Instructions and Practical Tips
+                  for Students / The Craft of Scientific Presentations
+                </strong>
+
+                <span class="description">
+
+                  30 min + 30 min + discussion.
+                  Focus on effective scientific presentations,
+                  critical errors to avoid and the marking scheme
+                  used for international seminars.
+
+                </span>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+
+    <!-- DAY 3 -->
+
+    <div class="day">
+
+      <div class="day-heading">
+
+        <div class="day-badge">
+          DAY 3
+        </div>
+
+        <h3>
+          Organic Chemistry & Interdisciplinary Research
+        </h3>
+
+      </div>
+
+
+      <div class="schedule-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+              <th>Time</th>
+              <th>Speaker(s)</th>
+              <th>Intervention</th>
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            <tr>
+
+              <td class="time">
+                09:00–11:00
+              </td>
+
+              <td class="speaker-col">
+                Pr. Rafik Katri
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Organic Chemistry Session
+                </strong>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                11:15–13:00
+              </td>
+
+              <td class="speaker-col">
+                Dr. Taoufik Ben Halima
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  IR and ¹H NMR:
+                  From Spectra to Structure
+                </strong>
+
+                <span class="description">
+
+                  Fundamentals of ¹H NMR and IR spectroscopy,
+                  followed by guided exercises using multiple spectra
+                  to deduce molecular structures from spectral data
+                  and chemical formulas.
+
+                </span>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                14:00–17:00
+              </td>
+
+              <td class="speaker-col">
+                Cross sessions · Multiple speakers
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Interdisciplinary Research Discussions
+                </strong>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+
+    <!-- DAY 4 -->
+
+    <div class="day">
+
+      <div class="day-heading">
+
+        <div class="day-badge">
+          DAY 4
+        </div>
+
+        <h3>
+          Scientific Closing & Future Perspectives
+        </h3>
+
+      </div>
+
+
+      <div class="schedule-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+              <th>Time</th>
+              <th>Speaker(s)</th>
+              <th>Intervention</th>
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            <tr>
+
+              <td class="time">
+                09:00–12:00
+              </td>
+
+              <td class="speaker-col">
+                All speakers
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Scientific Closing Debate
+                </strong>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                14:00–15:30
+              </td>
+
+              <td class="speaker-col">
+                Panel
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Future of Industry and Healthcare
+                </strong>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time">
+                15:30–16:00
+              </td>
+
+              <td class="speaker-col">
+                Closing speaker
+              </td>
+
+              <td class="title-col">
+
+                <strong>
+                  Final Perspectives
+                </strong>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= DOCTORAL TRAINING ================= -->
+
+<section id="training">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Doctoral Training
+      </h2>
+
+      <p>
+        Scientific training under the auspices of the Doctoral School
+      </p>
+
+    </div>
+
+
+    <div class="training">
+
+      <p>
+
+        This doctoral training will be delivered with the participation
+        of the following speakers. It is organized under the auspices
+        of the Doctoral School. Doctoral students who complete the
+        training will receive a certificate of participation.
+
+      </p>
+
+
+      <div class="training-list">
+
+        <div>
+          Dr. Adnen Arbi
+        </div>
+
+        <div>
+          Dr. Taoufik Ben Halima
+        </div>
+
+        <div>
+          Dr. Imed Boughzala
+        </div>
+
+        <div>
+          Dr. Rafik Katri
+        </div>
+
+        <div>
+          Dr. Slim Saadani
+        </div>
+
+        <div>
+          Dr. Slah Ouerhani
+        </div>
+
+        <div>
+          Dr. Sahbi Baccar
+        </div>
+
+        <div>
+          Dr. Khaoula Ben Ali
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="closing">
+
+      <h2>
+        Join HITAF26
+      </h2>
+
+      <p>
+
+        We look forward to your presence and contribution
+        to making HITAF26 a privileged opportunity for
+        scientific exchange, collaboration and innovation.
+
+      </p>
+
+      <p>
+
+        <strong>
+          Dr. Khaoula Ben Ali
+        </strong>
+
+        <br>
+
+        HITAF26 Organizing Committee
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="container footer-grid">
+
+    <div>
+
+      <div class="footer-title">
+        HITAF26
+      </div>
+
+      <div>
+        Healthcare and Industry —
+        Thinking About the Future
+      </div>
+
+    </div>
+
+
+    <div class="small">
+
+      28–31 October 2026 · Room 2B6
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
