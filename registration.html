@@ -222,7 +222,10 @@
             Please complete the form below with your academic and research information.
         </p>
 
-        <form action="#" method="post">
+        <!-- HITAF26 REGISTRATION FORM -->
+        <form
+            action="https://script.google.com/macros/s/AKfycbxhTWtbgMPLocvsfvCh0NjTAxI6aJtl2FZxLXGRc7cc8YrO5gmv_uKvCcYXCOW4dM7Sfg/exec"
+            method="POST">
 
             <h2 class="section-title">Personal Information</h2>
 
@@ -232,14 +235,24 @@
                     <label for="firstName">
                         First Name <span class="required">*</span>
                     </label>
-                    <input type="text" id="firstName" name="firstName" required>
+
+                    <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label for="lastName">
                         Last Name <span class="required">*</span>
                     </label>
-                    <input type="text" id="lastName" name="lastName" required>
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        required>
                 </div>
 
             </div>
@@ -250,14 +263,23 @@
                     <label for="email">
                         Email Address <span class="required">*</span>
                     </label>
-                    <input type="email" id="email" name="email" required>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">
                         Phone Number
                     </label>
-                    <input type="tel" id="phone" name="phone">
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone">
                 </div>
 
             </div>
@@ -268,14 +290,23 @@
                 <label for="institution">
                     University / Institution <span class="required">*</span>
                 </label>
-                <input type="text" id="institution" name="institution" required>
+
+                <input
+                    type="text"
+                    id="institution"
+                    name="institution"
+                    required>
             </div>
 
             <div class="form-group">
                 <label for="laboratory">
                     Laboratory / Research Team
                 </label>
-                <input type="text" id="laboratory" name="laboratory">
+
+                <input
+                    type="text"
+                    id="laboratory"
+                    name="laboratory">
             </div>
 
             <div class="row">
@@ -284,20 +315,28 @@
                     <label for="researchField">
                         PhD Research Field <span class="required">*</span>
                     </label>
-                    <input type="text" id="researchField" name="researchField" required>
+
+                    <input
+                        type="text"
+                        id="researchField"
+                        name="researchField"
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label for="phdYear">
                         PhD Year
                     </label>
+
                     <select id="phdYear" name="phdYear">
+
                         <option value="">Select</option>
                         <option value="1">1st Year</option>
                         <option value="2">2nd Year</option>
                         <option value="3">3rd Year</option>
                         <option value="4">4th Year</option>
                         <option value="5">5th Year or more</option>
+
                     </select>
                 </div>
 
@@ -307,7 +346,11 @@
                 <label for="supervisor">
                     PhD Supervisor
                 </label>
-                <input type="text" id="supervisor" name="supervisor">
+
+                <input
+                    type="text"
+                    id="supervisor"
+                    name="supervisor">
             </div>
 
             <h2 class="section-title">Participation</h2>
@@ -321,24 +364,27 @@
                 <div class="radio-group">
 
                     <label class="radio-option">
-                        <input type="radio"
-                               name="participation"
-                               value="doctoral-workshop"
-                               required>
+                        <input
+                            type="radio"
+                            name="participation"
+                            value="doctoral-workshop"
+                            required>
                         Doctoral Workshop
                     </label>
 
                     <label class="radio-option">
-                        <input type="radio"
-                               name="participation"
-                               value="doctoral-training">
+                        <input
+                            type="radio"
+                            name="participation"
+                            value="doctoral-training">
                         Doctoral Training
                     </label>
 
                     <label class="radio-option">
-                        <input type="radio"
-                               name="participation"
-                               value="both">
+                        <input
+                            type="radio"
+                            name="participation"
+                            value="both">
                         Both
                     </label>
 
@@ -355,16 +401,18 @@
                 <div class="radio-group">
 
                     <label class="radio-option">
-                        <input type="radio"
-                               name="presentation"
-                               value="yes">
+                        <input
+                            type="radio"
+                            name="presentation"
+                            value="yes">
                         Yes
                     </label>
 
                     <label class="radio-option">
-                        <input type="radio"
-                               name="presentation"
-                               value="no">
+                        <input
+                            type="radio"
+                            name="presentation"
+                            value="no">
                         No
                     </label>
 
@@ -378,10 +426,11 @@
                     Presentation Title
                 </label>
 
-                <input type="text"
-                       id="presentationTitle"
-                       name="presentationTitle"
-                       placeholder="If applicable">
+                <input
+                    type="text"
+                    id="presentationTitle"
+                    name="presentationTitle"
+                    placeholder="If applicable">
 
             </div>
 
@@ -391,9 +440,10 @@
                     Research Abstract
                 </label>
 
-                <textarea id="abstract"
-                          name="abstract"
-                          placeholder="Briefly describe your research..."></textarea>
+                <textarea
+                    id="abstract"
+                    name="abstract"
+                    placeholder="Briefly describe your research..."></textarea>
 
             </div>
 
@@ -401,9 +451,11 @@
 
                 <label>
 
-                    <input type="checkbox"
-                           name="consent"
-                           required>
+                    <input
+                        type="checkbox"
+                        name="consent"
+                        value="accepted"
+                        required>
 
                     <span>
                         I confirm that the information provided is accurate
