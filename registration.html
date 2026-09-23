@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doctoral Student Registration | HITAF26</title>
+
+    <meta name="description"
+          content="Doctoral Student Registration for HITAF26. Submit your registration and research information.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef7ff, #ffffff);
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #075985, #0284c7);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 17px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro {
+            margin-bottom: 30px;
+            color: #4b5563;
+        }
+
+        .section-title {
+            color: #075985;
+            font-size: 22px;
+            margin: 30px 0 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0f2fe;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #374151;
+        }
+
+        .required {
+            color: #dc2626;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            background: #fff;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0284c7;
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: normal;
+        }
+
+        .radio-option input {
+            width: auto;
+        }
+
+        .consent {
+            background: #f0f9ff;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        .consent label {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-weight: normal;
+        }
+
+        .consent input {
+            width: auto;
+            margin-top: 5px;
+        }
+
+        .submit-area {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #075985, #0284c7);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(2, 132, 199, 0.3);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: #075985;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .row {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>HITAF26</h1>
+    <p>Doctoral Student Registration</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <p class="intro">
+            Welcome to the HITAF26 Doctoral Student Registration page.
+            Please complete the form below with your academic and research information.
+        </p>
+
+        <form action="#" method="post">
+
+            <h2 class="section-title">Personal Information</h2>
+
+            <div class="row">
+
+                <div class="form-group">
+                    <label for="firstName">
+                        First Name <span class="required">*</span>
+                    </label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">
+                        Last Name <span class="required">*</span>
+                    </label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="form-group">
+                    <label for="email">
+                        Email Address <span class="required">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">
+                        Phone Number
+                    </label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+            </div>
+
+            <h2 class="section-title">Academic Information</h2>
+
+            <div class="form-group">
+                <label for="institution">
+                    University / Institution <span class="required">*</span>
+                </label>
+                <input type="text" id="institution" name="institution" required>
+            </div>
+
+            <div class="form-group">
+                <label for="laboratory">
+                    Laboratory / Research Team
+                </label>
+                <input type="text" id="laboratory" name="laboratory">
+            </div>
+
+            <div class="row">
+
+                <div class="form-group">
+                    <label for="researchField">
+                        PhD Research Field <span class="required">*</span>
+                    </label>
+                    <input type="text" id="researchField" name="researchField" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phdYear">
+                        PhD Year
+                    </label>
+                    <select id="phdYear" name="phdYear">
+                        <option value="">Select</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                        <option value="5">5th Year or more</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="supervisor">
+                    PhD Supervisor
+                </label>
+                <input type="text" id="supervisor" name="supervisor">
+            </div>
+
+            <h2 class="section-title">Participation</h2>
+
+            <div class="form-group">
+
+                <label>
+                    Participation Type <span class="required">*</span>
+                </label>
+
+                <div class="radio-group">
+
+                    <label class="radio-option">
+                        <input type="radio"
+                               name="participation"
+                               value="doctoral-workshop"
+                               required>
+                        Doctoral Workshop
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio"
+                               name="participation"
+                               value="doctoral-training">
+                        Doctoral Training
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio"
+                               name="participation"
+                               value="both">
+                        Both
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Would you like to present your research?
+                </label>
+
+                <div class="radio-group">
+
+                    <label class="radio-option">
+                        <input type="radio"
+                               name="presentation"
+                               value="yes">
+                        Yes
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio"
+                               name="presentation"
+                               value="no">
+                        No
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="presentationTitle">
+                    Presentation Title
+                </label>
+
+                <input type="text"
+                       id="presentationTitle"
+                       name="presentationTitle"
+                       placeholder="If applicable">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="abstract">
+                    Research Abstract
+                </label>
+
+                <textarea id="abstract"
+                          name="abstract"
+                          placeholder="Briefly describe your research..."></textarea>
+
+            </div>
+
+            <div class="consent">
+
+                <label>
+
+                    <input type="checkbox"
+                           name="consent"
+                           required>
+
+                    <span>
+                        I confirm that the information provided is accurate
+                        and I agree to the use of my information for HITAF26
+                        registration and organizational purposes.
+                    </span>
+
+                </label>
+
+            </div>
+
+            <div class="submit-area">
+
+                <button type="submit">
+                    Submit Registration
+                </button>
+
+                <br>
+
+                <a href="index.html" class="back-link">
+                    ← Back to HITAF26
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 HITAF26 — Doctoral Student Registration
+</footer>
+
+</body>
+</html>
