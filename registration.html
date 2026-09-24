@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,6 +171,12 @@
             box-shadow: 0 6px 18px rgba(2, 132, 199, 0.3);
         }
 
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         .back-link {
             display: inline-block;
             margin-top: 25px;
@@ -182,6 +187,32 @@
 
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        .success-message {
+            display: none;
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            color: #065f46;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .success-message h2 {
+            margin-bottom: 8px;
+        }
+
+        .error-message {
+            display: none;
+            background: #fef2f2;
+            border: 1px solid #ef4444;
+            color: #991b1b;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 25px;
+            text-align: center;
         }
 
         footer {
@@ -223,8 +254,8 @@
             Please complete the form below with your academic and research information.
         </p>
 
-        <!-- HITAF26 REGISTRATION FORM -->
         <form
+            id="registrationForm"
             action="https://script.google.com/macros/s/AKfycby1YKKHbIvfyUvRvP4KULgt_uOtT_B6QygoClrPiO73C9Nt1t0DroZPkzVIzUfTcF2OIw/exec"
             method="POST">
 
@@ -399,5 +430,169 @@
                     Would you like to present your research?
                 </label>
 
-                <div class="radio
-```
+                <div class="radio-group">
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="presentation"
+                            value="yes">
+                        Yes
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="presentation"
+                            value="no">
+                        No
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="presentationTitle">
+                    Presentation Title
+                </label>
+
+                <input
+                    type="text"
+                    id="presentationTitle"
+                    name="presentationTitle"
+                    placeholder="If applicable">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="abstract">
+                    Research Abstract
+                </label>
+
+                <textarea
+                    id="abstract"
+                    name="abstract"
+                    placeholder="Briefly describe your research..."></textarea>
+
+            </div>
+
+            <div class="consent">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="consent"
+                        value="accepted"
+                        required>
+
+                    <span>
+                        I confirm that the information provided is accurate
+                        and I agree to the use of my information for HITAF26
+                        registration and organizational purposes.
+                    </span>
+
+                </label>
+
+            </div>
+
+            <div class="submit-area">
+
+                <button type="submit" id="submitButton">
+                    Submit Registration
+                </button>
+
+                <br>
+
+                <a href="index.html" class="back-link">
+                    ← Back to HITAF26
+                </a>
+
+            </div>
+
+        </form>
+
+        <div id="successMessage" class="success-message">
+            <h2>Registration submitted successfully!</h2>
+            <p>
+                Thank you for registering for HITAF26.
+                Your information has been received.
+            </p>
+        </div>
+
+        <div id="errorMessage" class="error-message">
+            <h2>Submission Error</h2>
+            <p>
+                An error occurred while submitting your registration.
+                Please try again.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 HITAF26 — Doctoral Student Registration
+</footer>
+
+<script>
+    const form = document.getElementById("registrationForm");
+    const submitButton = document.getElementById("submitButton");
+    const successMessage = document.getElementById("successMessage");
+    const errorMessage = document.getElementById("errorMessage");
+
+    form.addEventListener("submit", async function(event) {
+
+        event.preventDefault();
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+
+        successMessage.style.display = "none";
+        errorMessage.style.display = "none";
+
+        const formData = new FormData(form);
+
+        try {
+
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.status === "success") {
+
+                form.style.display = "none";
+                successMessage.style.display = "block";
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            } else {
+
+                throw new Error(result.message || "Submission failed.");
+
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            errorMessage.style.display = "block";
+
+            submitButton.disabled = false;
+            submitButton.textContent = "Submit Registration";
+        }
+    });
+</script>
+
+</body>
+</html>
