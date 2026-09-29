@@ -1,1 +1,20 @@
+.institution-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  background: white;
+}
 
+.institution-logos img {
+  width: auto !important;
+  height: 55px !important;
+  max-width: 150px !important;
+  object-fit: contain;
+  display: block;
+}
