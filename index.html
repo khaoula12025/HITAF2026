@@ -109,9 +109,9 @@
       color: #55d7ee;
     }
 
-    /* ================= HERO ================= */
+  /* ================= HERO ================= */
 
-    .hero {
+.hero {
   background: 
     linear-gradient(
       135deg, 
@@ -126,160 +126,174 @@
   overflow: hidden;
 }
 
-    .hero:after {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 50%;
-      right: -130px;
-      top: -120px;
-      box-shadow:
-        0 0 0 70px rgba(255,255,255,.025),
-        0 0 0 140px rgba(255,255,255,.018);
-    }
+.hero:after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  right: -130px;
+  top: -120px;
+  box-shadow:
+    0 0 0 70px rgba(255,255,255,.025),
+    0 0 0 140px rgba(255,255,255,.018);
+}
 
-    .eyebrow {
-      display: inline-block;
-      padding: 7px 14px;
-      border: 1px solid rgba(255,255,255,.3);
-      border-radius: 30px;
-      font-size: .82rem;
-      letter-spacing: .8px;
-      margin-bottom: 20px;
-    }
+/* ================= MOVE HERO CONTENT UP ================= */
 
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      line-height: 1.02;
-      margin: 0 0 20px;
-      letter-spacing: -2px;
-    }
+.hero > .container {
+  position: relative;
+}
 
-    .hero h2 {
-      font-size: clamp(1.2rem, 2.5vw, 2rem);
-      font-weight: 400;
-      margin: 0 0 26px;
-      max-width: 850px;
-    }
+.hero .eyebrow,
+.hero h1,
+.hero h2,
+.hero .date,
+.hero .hero-buttons {
+  transform: translateY(-40px);
+}
 
-    .date {
-      font-size: 1.12rem;
-      font-weight: 700;
-      color: #d9f7ff;
-    }
+.eyebrow {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 30px;
+  font-size: .82rem;
+  letter-spacing: .8px;
+  margin-bottom: 20px;
+}
 
-    .hero-buttons {
-      margin-top: 30px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.02;
+  margin: 0 0 20px;
+  letter-spacing: -2px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: 700;
-      border: 1px solid rgba(255,255,255,.3);
-    }
+.hero h2 {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 400;
+  margin: 0 0 26px;
+  max-width: 850px;
+}
 
-    .btn.primary {
-      background: #fff;
-      color: var(--navy);
-    }
+.date {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #d9f7ff;
+}
 
-    .btn.secondary {
-      color: #fff;
-      background: rgba(255,255,255,.08);
-    }
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    /* ================= SECTIONS ================= */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,.3);
+}
 
-    section {
-      padding: 78px 0;
-    }
+.btn.primary {
+  background: #fff;
+  color: var(--navy);
+}
 
-    section.alt {
-      background: var(--light);
-    }
+.btn.secondary {
+  color: #fff;
+  background: rgba(255,255,255,.08);
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 44px;
-    }
+/* ================= SECTIONS ================= */
 
-    .section-title h2 {
-      margin: 0 0 8px;
-      font-size: 2rem;
-      color: var(--navy);
-    }
+section {
+  padding: 78px 0;
+}
 
-    .section-title p {
-      margin: 0;
-      color: var(--muted);
-    }
+section.alt {
+  background: var(--light);
+}
 
-    /* ================= ABOUT ================= */
+.section-title {
+  text-align: center;
+  margin-bottom: 44px;
+}
 
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 30px;
-      align-items: stretch;
-    }
+.section-title h2 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  color: var(--navy);
+}
 
-    .card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 8px 30px rgba(15,45,75,.06);
-    }
+.section-title p {
+  margin: 0;
+  color: var(--muted);
+}
 
-    .card h3 {
-      margin-top: 0;
-      color: var(--navy);
-    }
+/* ================= ABOUT ================= */
 
-    .info-box {
-      background: linear-gradient(145deg,#0b1f3a,#1464a5);
-      color: #fff;
-      border-radius: 16px;
-      padding: 30px;
-    }
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
 
-    .info-box h3 {
-      color: #fff;
-      margin-top: 0;
-    }
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(15,45,75,.06);
+}
 
-    .info-row {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255,255,255,.16);
-    }
+.card h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
 
-    .info-row:last-child {
-      border-bottom: 0;
-    }
+.info-box {
+  background: linear-gradient(145deg,#0b1f3a,#1464a5);
+  color: #fff;
+  border-radius: 16px;
+  padding: 30px;
+}
 
-    /* ================= COMMITTEE ================= */
+.info-box h3 {
+  color: #fff;
+  margin-top: 0;
+}
 
-    .committee {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
+.info-row {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,.16);
+}
 
-    .person {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      font-weight: 700;
-    }
+.info-row:last-child {
+  border-bottom: 0;
+}
+
+/* ================= COMMITTEE ================= */
+
+.committee {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.person {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+}
 
     /* ================= SPEAKERS ================= */
 
