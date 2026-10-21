@@ -39,9 +39,11 @@
   display: block;
 }
 
-/* INSAT logo: bigger so it looks as large as the Carthage logo (adjust 125px if needed) */
+
 .institution-logos img.logo-insat {
-  height: 125px !important;
+  /* the INSAT image is square with a lot of white space: we fill the whole box and crop the white */
+  object-fit: cover;
+  object-position: 50% 40%;
 }
 
 @media (max-width: 600px) {
