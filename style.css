@@ -1,8 +1,9 @@
 .institution-logos {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
   justify-content: center;
   align-items: center;
-  gap: 35px;
+  gap: 20px 35px;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
@@ -12,7 +13,7 @@
 }
 
 .institution-logos img {
-  width: auto !important;
+  width: 150px !important;
   height: 55px !important;
   max-width: 150px !important;
   object-fit: contain;
