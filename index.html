@@ -13,20 +13,35 @@
 
 .institution-logos {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 70px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
   width: 100%;
     margin-top: 130px;
   padding-right: 20px;
 }
 
+.logos-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  max-width: 100%;
+}
+
 .institution-logos img {
-  width: auto !important;
-  height: 108px !important;
-  max-width: 285px !important;
+  flex: 0 1 240px;
+  min-width: 0;
+  width: 240px !important;
+  height: 90px !important;
+  max-width: 100% !important;
   object-fit: contain;
   display: block;
+}
+
+@media (max-width: 600px) {
+  .logos-row { flex-wrap: wrap; justify-content: center; }
+  .institution-logos img { flex: 0 0 42%; width: 42% !important; height: 60px !important; }
 }
     :root {
       --navy: #0b1f3a;
@@ -587,12 +602,18 @@ section.alt {
 
     <!-- INSTITUTIONAL LOGOS -->
     <div class="institution-logos">
-      <img src="logos/insat.jpg" alt="INSAT">
-      <img src="logos/ucar.jfif" alt="Université de Carthage">
-      <img src="logos/ambassade.jfif" alt="Ambassade">
-      <img src="logos/partenaire-oored.png" alt="Partenaire">
-      <img src="logos/RTCA.jfif" alt="Partenaire2">
-      <img src="logos/logiee.jfif" alt="INSAT IEEE Student Branch">
+
+      <div class="logos-row">
+        <img src="logos/insat.jpg" alt="INSAT">
+        <img src="logos/ucar.jfif" alt="Université de Carthage">
+      </div>
+
+      <div class="logos-row">
+        <img src="logos/ambassade.jfif" alt="Ambassade">
+        <img src="logos/partenaire-oored.png" alt="Partenaire">
+        <img src="logos/RTCA.jfif" alt="Partenaire2">
+        <img src="logos/logiee.jfif" alt="INSAT IEEE Student Branch">
+      </div>
 
     </div>
 
