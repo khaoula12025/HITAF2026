@@ -1,8 +1,8 @@
 .institution-logos {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: flex-end;
-  gap: 45px;
+  gap: 15px;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
@@ -11,23 +11,10 @@
   background: white;
 }
 
-.logos-left {
+.logos-row {
   display: flex;
   align-items: center;
   gap: 35px;
-}
-
-.logos-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 15px;
-}
-
-.logos-top {
-  display: flex;
-  align-items: center;
-  gap: 25px;
 }
 
 .institution-logos img {
