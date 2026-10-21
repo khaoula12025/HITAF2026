@@ -39,6 +39,11 @@
   display: block;
 }
 
+/* INSAT logo: bigger so it looks as large as the Carthage logo (adjust 125px if needed) */
+.institution-logos img.logo-insat {
+  height: 125px !important;
+}
+
 @media (max-width: 600px) {
   .logos-row { flex-wrap: wrap; justify-content: center; }
   .institution-logos img { flex: 0 0 42%; width: 42% !important; height: 60px !important; }
@@ -604,7 +609,7 @@ section.alt {
     <div class="institution-logos">
 
       <div class="logos-row">
-        <img src="logos/insat.jpg" alt="INSAT">
+        <img class="logo-insat" src="logos/insat.jpg" alt="INSAT">
         <img src="logos/ucar.jfif" alt="Université de Carthage">
       </div>
 
