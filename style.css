@@ -1,15 +1,33 @@
 .institution-logos {
-  display: grid;
-  grid-template-columns: repeat(4, 150px);
+  display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px 35px;
+  align-items: flex-end;
+  gap: 45px;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 15px 20px;
   box-sizing: border-box;
   background: white;
+}
+
+.logos-left {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.logos-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.logos-top {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .institution-logos img {
@@ -20,9 +38,7 @@
   display: block;
 }
 
-/* INSAT et Carthage : ligne du haut, à droite, plus grands */
-.institution-logos img:nth-child(1) { grid-column: 3; grid-row: 1; height: 85px !important; }
-.institution-logos img:nth-child(2) { grid-column: 4; grid-row: 1; height: 85px !important; }
-
-/* ambassade, Ooredoo, RTCA, IEEE : ligne du dessous */
-.institution-logos img:nth-child(n+3) { grid-row: 2; }
+/* INSAT et Carthage : plus grands */
+.logos-top img {
+  height: 85px !important;
+}
